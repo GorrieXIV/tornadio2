@@ -31,7 +31,7 @@ from random import random
 def _random_key():
     """Return random session key"""
     i = md5()
-    i.update('%s%s' % (random(), time()))
+    i.update(b'%b%b' % (str(random()).encode('utf-8'), str(time()).encode('utf-8')))
     return i.hexdigest()
 
 
@@ -92,7 +92,7 @@ class SessionContainer(object):
             Session object
         """
         self._items[session.session_id] = session
-
+        
         if session.expiry is not None:
             heappush(self._queue, session)
 
@@ -102,7 +102,7 @@ class SessionContainer(object):
         `session_id`
             Session identifier
         """
-        return self._items.get(session_id, None)
+        return self._items.get(session_id.decode('utf-8'), None)
 
     def remove(self, session_id):
         """Remove session object from the container

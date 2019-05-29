@@ -208,7 +208,6 @@ class TornadioRouter(object):
                             request,
                             self.settings.get('session_expiry')
                             )
-
         self._sessions.add(s)
 
         return s
