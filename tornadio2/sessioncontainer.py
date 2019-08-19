@@ -102,7 +102,7 @@ class SessionContainer(object):
         `session_id`
             Session identifier
         """
-        return self._items.get(session_id.decode('utf-8'), None)
+        return self._items.get(session_id, None)
 
     def remove(self, session_id):
         """Remove session object from the container
