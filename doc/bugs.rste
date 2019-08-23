@@ -72,7 +72,7 @@ protocol.
 
 There are few workarounds:
 1. Disable websockets for everyone (duh)
-2. Run TornadIO2 (or your proxy/load balancer) on two different ports and have simple logic
+2. Run TornadIO3 (or your proxy/load balancer) on two different ports and have simple logic
    on client side to switch to another port if connection fails
 
 Socket.IO developers are aware of the problem and next socket.io version will provide

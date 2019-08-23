@@ -15,10 +15,10 @@
 # under the License.
 
 """
-    tornadio2.session
+    tornadio3.session
     ~~~~~~~~~~~~~~~~~
 
-    Active TornadIO2 connection session.
+    Active TornadIO3 connection session.
 """
 
 from urllib.parse import urlparse
@@ -27,7 +27,7 @@ import logging
 
 from tornado.web import HTTPError
 
-from tornadio2 import sessioncontainer, proto, periodic, stats
+from tornadio3 import sessioncontainer, proto, periodic, stats
 
 
 class ConnectionInfo(object):

@@ -4,7 +4,7 @@ Events
 Instead of having "just" messages, socket.io 0.7 introduced new concept of events.
 Event is just a name and collection of parameters.
 
-TornadIO2 provides easy-to-use syntax sugar which emulates RPC calls from the client
+TornadIO3 provides easy-to-use syntax sugar which emulates RPC calls from the client
 to your python code. Check following example:
 ::
 
@@ -67,7 +67,7 @@ If you send data from client using following code:
     sock.emit('test', {a: 10, b: 10});
 
 
-TornadIO2 will unpack dictionary into ``kwargs`` parameters and pass it to the
+TornadIO3 will unpack dictionary into ``kwargs`` parameters and pass it to the
 ``on_event`` handler. However, if you pass more than one parameter, Tornadio2 won't
 unpack them into ``kwargs`` and will just pass parameters as ``args``. For example, this
 code will lead to ``args`` being passed to ``on_event`` handler:

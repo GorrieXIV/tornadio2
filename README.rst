@@ -13,7 +13,7 @@ Introduction
 This is python server implementation of the `Socket.IO <http://socket.io>`_ realtime
 transport library on top of the `Tornado <http://www.tornadoweb.org>`_ framework.
 
-TornadIO2 is compatible with 0.7+ version of the Socket.IO and implements
+TornadIO3 is compatible with 0.7+ version of the Socket.IO and implements
 most of the features found in original Socket.IO server software.
 
 Key features:
@@ -34,7 +34,7 @@ protocol available.
 
 Getting Started
 ---------------
-In order to start working with the TornadIO2 library, you have to have some basic Tornado
+In order to start working with the TornadIO3 library, you have to have some basic Tornado
 knowledge. If you don't know how to use it, please read Tornado tutorial, which can be found
 `here <http://www.tornadoweb.org/documentation#tornado-walk-through>`_.
 
@@ -46,7 +46,7 @@ If you're familiar with Tornado, do following to add support for Socket.IO to yo
         def on_message(self, message):
             pass
 
-2. Create TornadIO2 server for your connection::
+2. Create TornadIO3 server for your connection::
 
     MyRouter = tornadio3.TornadioRouter(MyConnection)
 
@@ -79,7 +79,7 @@ then manually start IOLoop.
 More information
 ----------------
 
-For more information, check `TornadIO2 documentation <http://readthedocs.org/docs/tornadio3/en/latest/>`_ and sample applications.
+For more information, check `TornadIO3 documentation <http://readthedocs.org/docs/tornadio3/en/latest/>`_ and sample applications.
 
 
 Examples
@@ -109,7 +109,7 @@ Ping and chat demo running through one connection. You can see it in ``examples/
 Stats
 ^^^^^
 
-TornadIO2 collects some counters that you can use to troubleshoot your application performance.
+TornadIO3 collects some counters that you can use to troubleshoot your application performance.
 Example in ``examples/stats`` directory gives an idea how you can use these stats to plot realtime graph.
 
 RPC ping

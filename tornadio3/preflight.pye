@@ -15,7 +15,7 @@
 # under the License.
 
 """
-    tornadio2.preflight
+    tornadio3.preflight
     ~~~~~~~~~~~~~~~~~~~
 
     Transport protocol router and main entry point for all socket.io clients.

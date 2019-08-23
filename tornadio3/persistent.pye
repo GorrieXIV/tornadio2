@@ -15,7 +15,7 @@
 # under the License.
 
 """
-    tornadio2.persistent
+    tornadio3.persistent
     ~~~~~~~~~~~~~~~~~~~~
 
     Persistent transport implementations.
@@ -29,7 +29,7 @@ from tornado.web import HTTPError
 from tornado import stack_context
 from tornado.websocket import WebSocketHandler
 
-from tornadio2 import proto
+from tornadio3 import proto
 
 
 class TornadioWebSocketHandler(WebSocketHandler):

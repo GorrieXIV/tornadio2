@@ -1,7 +1,7 @@
 Unicode
 =======
 
-TornadIO2 supports unicode for all transports. When you send something, it will be automatically
+TornadIO3 supports unicode for all transports. When you send something, it will be automatically
 converted to the unicode (assuming that it is not unicode already).
 
 Few rules:

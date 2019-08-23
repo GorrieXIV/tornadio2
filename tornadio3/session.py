@@ -18,7 +18,7 @@
     tornadio3.session
     ~~~~~~~~~~~~~~~~~
 
-    Active TornadIO2 connection session.
+    Active TornadIO3 connection session.
 """
 
 from urllib.parse import urlparse

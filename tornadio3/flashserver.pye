@@ -15,7 +15,7 @@
 # under the License.
 
 """
-    tornadio2.flashserver
+    tornadio3.flashserver
     ~~~~~~~~~~~~~~~~~~~~~
 
     Flash Socket policy server implementation. Merged with minor modifications

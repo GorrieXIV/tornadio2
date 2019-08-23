@@ -2,7 +2,7 @@ from collections import deque
 
 from nose.tools import eq_, raises
 
-from tornadio2 import session, proto, conn, stats
+from tornadio3 import session, proto, conn, stats
 
 from simplejson import JSONDecodeError
 

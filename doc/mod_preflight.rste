@@ -1,7 +1,7 @@
-``tornadio2.preflight``
+``tornadio3.preflight``
 =======================
 
-.. automodule:: tornadio2.preflight
+.. automodule:: tornadio3.preflight
 
 	.. autoclass:: PreflightHandler
 

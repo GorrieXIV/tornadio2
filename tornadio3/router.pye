@@ -15,7 +15,7 @@
 # under the License.
 
 """
-    tornadio2.router
+    tornadio3.router
     ~~~~~~~~~~~~~~~~
 
     Transport protocol router and main entry point for all socket.io clients.
@@ -24,7 +24,7 @@
 from tornado import ioloop, version_info
 from tornado.web import HTTPError
 
-from tornadio2 import persistent, polling, sessioncontainer, session, proto, preflight, stats
+from tornadio3 import persistent, polling, sessioncontainer, session, proto, preflight, stats
 
 PROTOCOLS = {
     'websocket': persistent.TornadioWebSocketHandler,

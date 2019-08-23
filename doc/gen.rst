@@ -8,7 +8,7 @@ While you can use ``tornado.gen`` API without any problems, sometimes you may wa
 order they were received. If you will decorate your functions with ``tornado.gen.engine``, your code will work asynchronously -
 second message might get handled before first message got processed.
 
-To prevent this situation, TornadIO2 provides helpful decorator: ``tornadio3.gen.sync_engine``. ``sync_engine`` will queue incoming
+To prevent this situation, TornadIO3 provides helpful decorator: ``tornadio3.gen.sync_engine``. ``sync_engine`` will queue incoming
 calls if there's another instance of the function running. As a result, it will call your method synchronously without
 blocking the io_loop. This decorator only works with class methods, don't try to use it for functions - it requires ``self``
 to properly function.

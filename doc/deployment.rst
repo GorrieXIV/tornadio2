@@ -37,4 +37,4 @@ just plain sockets with your custom protocol.
 Performance
 -----------
 
-Unfortunately, TornadIO2 was not properly benchmarked and this is something that will be accomplished in the future.
+Unfortunately, TornadIO3 was not properly benchmarked and this is something that will be accomplished in the future.

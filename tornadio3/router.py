@@ -116,7 +116,7 @@ class HandshakeHandler(preflight.PreflightHandler):
 
 
 class TornadioRouter(object):
-    """TornadIO2 router implementation"""
+    """TornadIO3 router implementation"""
 
     def __init__(self,
                  connection,
@@ -137,7 +137,7 @@ class TornadioRouter(object):
 
         # TODO: Version check
         if version_info[0] < 2:
-            raise Exception('TornadIO2 requires Tornado 2.0 or higher.')
+            raise Exception('TornadIO3 requires Tornado 2.0 or higher.')
 
         # Store connection class
         self._connection = connection

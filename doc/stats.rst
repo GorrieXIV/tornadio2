@@ -1,7 +1,7 @@
 Statistics
 ==========
 
-TornadIO2 captures some counters:
+TornadIO3 captures some counters:
 
 ================== =======================================
 Name               Description
