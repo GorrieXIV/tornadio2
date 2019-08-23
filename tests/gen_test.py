@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    tornadio2.tests.gen
+    tornadio3.tests.gen
     ~~~~~~~~~~~~~~~~~~~
 
     :copyright: (c) 2011 by the Serge S. Koval, see AUTHORS for more details.
@@ -11,7 +11,7 @@ from collections import deque
 
 from nose.tools import eq_
 
-from tornadio2 import gen
+from tornadio3 import gen
 
 _queue = None
 

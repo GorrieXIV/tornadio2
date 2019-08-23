@@ -1,7 +1,7 @@
-``tornadio2.sessioncontainer``
+``tornadio3.sessioncontainer``
 ==============================
 
-.. automodule:: tornadio2.sessioncontainer
+.. automodule:: tornadio3.sessioncontainer
 
 	.. autoclass:: SessionBase
 

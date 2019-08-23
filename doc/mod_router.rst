@@ -1,7 +1,7 @@
-``tornadio2.router``
+``tornadio3.router``
 ====================
 
-.. automodule:: tornadio2.router
+.. automodule:: tornadio3.router
 
 	.. autoclass:: TornadioRouter
 

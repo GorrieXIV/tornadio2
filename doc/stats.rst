@@ -26,7 +26,7 @@ packets_recv_ps    Packets received per second
 Stats are captured by the router object and can be accessed
 through the ``stats`` property::
 
-	MyRouter = tornadio2.TornadioRouter(MyConnection)
+	MyRouter = tornadio3.TornadioRouter(MyConnection)
 
 	print MyRouter.stats.dump()
 

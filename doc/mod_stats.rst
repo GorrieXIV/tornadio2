@@ -1,7 +1,7 @@
-``tornadio2.stats``
+``tornadio3.stats``
 ===================
 
-.. automodule:: tornadio2.stats
+.. automodule:: tornadio3.stats
 
 	.. autoclass:: StatsCollector
 

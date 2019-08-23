@@ -26,7 +26,7 @@ your main connection class:
         def on_message(self, msg):
             pass
 
-    MyRouter = tornadio2.router.TornadioRouter(MyRouterConnection)
+    MyRouter = tornadio3.router.TornadioRouter(MyRouterConnection)
 
 On client side, create two connections:
 ::

@@ -40,15 +40,15 @@ knowledge. If you don't know how to use it, please read Tornado tutorial, which 
 
 If you're familiar with Tornado, do following to add support for Socket.IO to your application:
 
-1. Derive from tornadio2.SocketConnection class and override on_message method (on_open/on_close are optional)::
+1. Derive from tornadio3.SocketConnection class and override on_message method (on_open/on_close are optional)::
 
-    class MyConnection(tornadio2.SocketConnection):
+    class MyConnection(tornadio3.SocketConnection):
         def on_message(self, message):
             pass
 
 2. Create TornadIO2 server for your connection::
 
-    MyRouter = tornadio2.TornadioRouter(MyConnection)
+    MyRouter = tornadio3.TornadioRouter(MyConnection)
 
 3. Add your handler routes to the Tornado application::
 
@@ -79,7 +79,7 @@ then manually start IOLoop.
 More information
 ----------------
 
-For more information, check `TornadIO2 documentation <http://readthedocs.org/docs/tornadio2/en/latest/>`_ and sample applications.
+For more information, check `TornadIO2 documentation <http://readthedocs.org/docs/tornadio3/en/latest/>`_ and sample applications.
 
 
 Examples

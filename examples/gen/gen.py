@@ -3,7 +3,7 @@ from datetime import timedelta
 
 from tornado import web, httpclient, ioloop
 
-from tornadio2 import SocketConnection, TornadioRouter, SocketServer, event, gen
+from tornadio3 import SocketConnection, TornadioRouter, SocketServer, event, gen
 
 
 ROOT = op.normpath(op.dirname(__file__))

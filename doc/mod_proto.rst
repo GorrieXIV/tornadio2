@@ -1,7 +1,7 @@
-``tornadio2.proto``
+``tornadio3.proto``
 ===================
 
-.. automodule:: tornadio2.proto
+.. automodule:: tornadio3.proto
 
 	Packets
 	^^^^^^^

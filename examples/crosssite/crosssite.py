@@ -3,10 +3,10 @@ from os import path as op
 import tornado
 import tornado.web
 import tornado.httpserver
-import tornadio2
-import tornadio2.router
-import tornadio2.server
-import tornadio2.conn
+import tornadio3
+import tornadio3.router
+import tornadio3.server
+import tornadio3.conn
 
 ROOT = op.normpath(op.dirname(__file__))
 
@@ -22,7 +22,7 @@ class SocketIOHandler(tornado.web.RequestHandler):
         self.render('../socket.io.js')
 
 
-class ChatConnection(tornadio2.conn.SocketConnection):
+class ChatConnection(tornadio3.conn.SocketConnection):
     # Class level variable
     participants = set()
 
@@ -39,7 +39,7 @@ class ChatConnection(tornadio2.conn.SocketConnection):
         self.participants.remove(self)
 
 # Create tornadio server
-ChatRouter = tornadio2.router.TornadioRouter(ChatConnection)
+ChatRouter = tornadio3.router.TornadioRouter(ChatConnection)
 
 # Create socket application
 sock_app = tornado.web.Application(
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     http_server.listen(8001)
 
     # Create tornadio server on port 8002, but don't start it yet
-    tornadio2.server.SocketServer(sock_app, auto_start=False)
+    tornadio3.server.SocketServer(sock_app, auto_start=False)
 
     # Start both servers
     tornado.ioloop.IOLoop.instance().start()

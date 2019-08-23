@@ -15,12 +15,12 @@
 # under the License.
 
 """
-    tornadio2
+    tornadio3
     ~~~~~~~~~
 """
 
-__version__ = (0, 0, 3)
+__version__ = (0, 0, 1)
 
-from tornadio2.conn import SocketConnection, event
-from tornadio2.router import TornadioRouter
-from tornadio2.server import SocketServer
+from tornadio3.conn import SocketConnection, event
+from tornadio3.router import TornadioRouter
+from tornadio3.server import SocketServer

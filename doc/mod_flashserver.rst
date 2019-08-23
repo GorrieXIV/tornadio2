@@ -1,7 +1,7 @@
-``tornadio2.flashserver``
+``tornadio3.flashserver``
 =========================
 
-.. automodule:: tornadio2.flashserver
+.. automodule:: tornadio3.flashserver
 
 	.. autoclass:: FlashPolicyServer
 

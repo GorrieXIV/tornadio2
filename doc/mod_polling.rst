@@ -1,7 +1,7 @@
-``tornadio2.polling``
+``tornadio3.polling``
 =====================
 
-.. automodule:: tornadio2.polling
+.. automodule:: tornadio3.polling
 
 	.. autoclass:: TornadioPollingHandlerBase
 
