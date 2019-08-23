@@ -96,7 +96,7 @@ class SocketServer(HTTPServer):
                     io_loop=io_loop,
                     port=flash_policy_port,
                     policy_file=flash_policy_file)
-            except Exception, ex:
+            except Exception as ex:
                 logging.error('Failed to start Flash policy server: %s', ex)
 
         if auto_start:
