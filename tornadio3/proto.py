@@ -102,7 +102,7 @@ def message(endpoint, msg, message_id=None, force_json=False):
                    'message_id': message_id or u''}
 
     # Trying to send a dict over the wire ?
-    if not isinstance(msg, (unicode, str)) and isinstance(msg, (dict, object)):
+    if not isinstance(msg, (str, str)) and isinstance(msg, (dict, object)):
         packed_data.update({'kind': JSON,
                             'msg': json.dumps(msg, **json_decimal_args)})
 
@@ -110,7 +110,7 @@ def message(endpoint, msg, message_id=None, force_json=False):
     # and respect forced JSON if requested
     else:
         packed_data.update({'kind': MESSAGE if not force_json else JSON,
-                            'msg': msg if isinstance(msg, unicode) else str(msg).decode('utf-8')})
+                            'msg': msg if isinstance(msg, str) else str(msg).decode('utf-8')})
 
     return packed_message_tpl % packed_data
 
@@ -220,7 +220,7 @@ def decode_frames(data):
 
     """
     # Single message - nothing to decode here
-    assert isinstance(data, unicode), 'frame is not unicode'
+    assert isinstance(data, str), 'frame is not unicode string'
 
     if not data.startswith(FRAME_SEPARATOR):
         return [data]
