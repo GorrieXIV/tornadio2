@@ -443,5 +443,12 @@ class Session(sessioncontainer.SessionBase):
             return False
         else:
             return True
+
     def __eq__(self, other):
         return (self.expiry == other.expiry)
+
+    def __setattr__(self, attr, value):
+        if attr == 'proto':
+            proto = getattr(self, attr, 'unset')
+            logging.debug('Changing the protocol of session %s from %s to %s' % (self.session_id, proto, value))
+        super(sessioncontainer.SessionBase, self).__setattr__(attr, value)
