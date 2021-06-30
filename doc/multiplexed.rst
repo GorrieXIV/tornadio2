@@ -3,7 +3,7 @@ Multiplexed connections
 
 Starting from socket.io 0.7, there's new concept of multiplexed connections:
 you can have multiple "virtual" connections working through one transport connection.
-TornadIO2 supports this transparently, but you have to tell TornadIO how to route
+TornadIO3 supports this transparently, but you have to tell TornadIO how to route
 multiplexed connection requests. To accomplish this, you can either use built-in
 routing mechanism or implement your own.
 
@@ -26,7 +26,7 @@ your main connection class:
         def on_message(self, msg):
             pass
 
-    MyRouter = tornadio2.router.TornadioRouter(MyRouterConnection)
+    MyRouter = tornadio3.router.TornadioRouter(MyRouterConnection)
 
 On client side, create two connections:
 ::

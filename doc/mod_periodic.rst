@@ -1,7 +1,7 @@
-``tornadio2.periodic``
+``tornadio3.periodic``
 ======================
 
-.. automodule:: tornadio2.periodic
+.. automodule:: tornadio3.periodic
 
 	.. autoclass:: Callback
 

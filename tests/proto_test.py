@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    tornadio2.tests.proto_test
+    tornadio3.tests.proto_test
     ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     :copyright: (c) 2011 by the Serge S. Koval, see AUTHORS for more details.
@@ -9,7 +9,7 @@
 
 from nose.tools import eq_
 
-from tornadio2 import proto
+from tornadio3 import proto
 
 
 def test_encode_frames():

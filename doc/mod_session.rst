@@ -1,10 +1,10 @@
-``tornadio2.session``
+``tornadio3.session``
 =====================
 
 Session
 -------
 
-.. automodule:: tornadio2.session
+.. automodule:: tornadio3.session
 
 	.. autoclass:: Session
 

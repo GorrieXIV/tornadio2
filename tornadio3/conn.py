@@ -15,7 +15,7 @@
 # under the License.
 
 """
-    tornadio2.conn
+    tornadio3.conn
     ~~~~~~~~~~~~~~
 
     Tornadio connection implementation.
@@ -24,7 +24,7 @@ import time
 import logging
 from inspect import ismethod, getmembers
 
-from tornadio2 import proto
+from tornadio3 import proto
 
 
 def event(name_or_func):

@@ -15,7 +15,7 @@
 # under the License.
 
 """
-    tornadio2.router
+    tornadio3.router
     ~~~~~~~~~~~~~~~~
 
     Transport protocol router and main entry point for all socket.io clients.
@@ -24,7 +24,7 @@
 from tornado import ioloop, version_info
 from tornado.web import HTTPError
 
-from tornadio2 import persistent, polling, sessioncontainer, session, proto, preflight, stats
+from tornadio3 import persistent, polling, sessioncontainer, session, proto, preflight, stats
 
 PROTOCOLS = {
     'websocket': persistent.TornadioWebSocketHandler,
@@ -58,7 +58,12 @@ DEFAULT_SETTINGS = {
     'global_heartbeats': True,
     # Client timeout adjustment in seconds. If you see your clients disconnect without a
     # reason, increase this value.
-    'client_timeout': 5
+    'client_timeout': 5,
+    # Verify remote IP. May want to disable this for some setups. Some networks send traffic
+    # from same client, different IP each time. If you set this to False, TornadIO will not
+    # check the session ID against IP address. This has consequences for spoofing sessions and
+    # so on, so use with extreme caution.
+    'verify_remote_ip': True,
     }
 
 
@@ -111,7 +116,7 @@ class HandshakeHandler(preflight.PreflightHandler):
 
 
 class TornadioRouter(object):
-    """TornadIO2 router implementation"""
+    """TornadIO3 router implementation"""
 
     def __init__(self,
                  connection,
@@ -132,7 +137,7 @@ class TornadioRouter(object):
 
         # TODO: Version check
         if version_info[0] < 2:
-            raise Exception('TornadIO2 requires Tornado 2.0 or higher.')
+            raise Exception('TornadIO3 requires Tornado 2.0 or higher.')
 
         # Store connection class
         self._connection = connection
@@ -203,7 +208,6 @@ class TornadioRouter(object):
                             request,
                             self.settings.get('session_expiry')
                             )
-
         self._sessions.add(s)
 
         return s

@@ -15,18 +15,19 @@
 # under the License.
 
 """
-    tornadio2.session
+    tornadio3.session
     ~~~~~~~~~~~~~~~~~
 
-    Active TornadIO2 connection session.
+    Active TornadIO3 connection session.
 """
 
-import urlparse
+from urllib.parse import urlparse
+from functools import total_ordering
 import logging
 
 from tornado.web import HTTPError
 
-from tornadio2 import sessioncontainer, proto, periodic, stats
+from tornadio3 import sessioncontainer, proto, periodic, stats
 
 
 class ConnectionInfo(object):
@@ -60,7 +61,7 @@ class ConnectionInfo(object):
         """Return single cookie by its name"""
         return self.cookies.get(name)
 
-
+@total_ordering
 class Session(sessioncontainer.SessionBase):
     """Socket.IO session implementation.
 
@@ -403,7 +404,7 @@ class Session(sessioncontainer.SessionBase):
                 # in args
                 if len(args) == 1 and isinstance(args[0], dict):
                     # Fix for the http://bugs.python.org/issue4978 for older Python versions
-                    str_args = dict((str(x), y) for x, y in args[0].iteritems())
+                    str_args = dict((str(x), y) for x, y in args[0].items())
 
                     ack_response = conn.on_event(event['name'], msg_id=msg_id, kwargs=str_args)
                 else:
@@ -428,9 +429,26 @@ class Session(sessioncontainer.SessionBase):
                 logging.error('Incoming error: %s' % msg_data)
             elif msg_type == proto.NOOP:
                 pass
-        except Exception, ex:
+        except Exception as ex:
             logging.exception(ex)
 
             # TODO: Add global exception callback?
 
             raise
+
+    def __lt__(self, other):
+        if (self.expiry and other.expiry):
+            return (self.expiry < other.expiry)
+        elif (self.expiry):
+            return False
+        else:
+            return True
+
+    def __eq__(self, other):
+        return (self.expiry == other.expiry)
+
+    def __setattr__(self, attr, value):
+        if attr == 'proto':
+            proto = getattr(self, attr, 'unset')
+            logging.debug('Changing the protocol of session %s from %s to %s' % (self.session_id, proto, value))
+        super(sessioncontainer.SessionBase, self).__setattr__(attr, value)

@@ -1,7 +1,7 @@
-``tornadio2.server``
+``tornadio3.server``
 ====================
 
-.. automodule:: tornadio2.server
+.. automodule:: tornadio3.server
 
 	.. autoclass:: SocketServer
 

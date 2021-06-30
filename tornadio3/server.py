@@ -15,7 +15,7 @@
 # under the License.
 
 """
-    tornadio2.server
+    tornadio3.server
     ~~~~~~~~~~~~~~~~
 
     Implements handy wrapper to start FlashSocket server (if FlashSocket
@@ -27,7 +27,7 @@ import logging
 from tornado import ioloop
 from tornado.httpserver import HTTPServer
 
-from tornadio2.flashserver import FlashPolicyServer
+from tornadio3.flashserver import FlashPolicyServer
 
 
 class SocketServer(HTTPServer):
@@ -96,7 +96,7 @@ class SocketServer(HTTPServer):
                     io_loop=io_loop,
                     port=flash_policy_port,
                     policy_file=flash_policy_file)
-            except Exception, ex:
+            except Exception as ex:
                 logging.error('Failed to start Flash policy server: %s', ex)
 
         if auto_start:

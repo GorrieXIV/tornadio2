@@ -15,7 +15,7 @@
 # under the License.
 
 """
-    tornadio2.flashserver
+    tornadio3.flashserver
     ~~~~~~~~~~~~~~~~~~~~~
 
     Flash Socket policy server implementation. Merged with minor modifications
@@ -64,7 +64,7 @@ class FlashPolicyServer(object):
         while True:
             try:
                 connection, address = sock.accept()
-            except socket.error, ex:
+            except socket.error as ex:
                 if ex[0] not in (errno.EWOULDBLOCK, errno.EAGAIN):
                     raise
                 return

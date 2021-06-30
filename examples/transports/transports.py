@@ -1,10 +1,10 @@
 from os import path as op
 
 import tornado.web
-import tornadio2
-import tornadio2.router
-import tornadio2.server
-import tornadio2.conn
+import tornadio3
+import tornadio3.router
+import tornadio3.server
+import tornadio3.conn
 
 ROOT = op.normpath(op.dirname(__file__))
 
@@ -31,7 +31,7 @@ class WebSocketFileHandler(tornado.web.RequestHandler):
             self.finish()
 
 
-class ChatConnection(tornadio2.conn.SocketConnection):
+class ChatConnection(tornadio3.conn.SocketConnection):
     # Class level variable
     participants = set()
 
@@ -48,7 +48,7 @@ class ChatConnection(tornadio2.conn.SocketConnection):
         self.participants.remove(self)
 
 # Create chat server
-ChatRouter = tornadio2.router.TornadioRouter(ChatConnection, dict(websocket_check=True))
+ChatRouter = tornadio3.router.TornadioRouter(ChatConnection, dict(websocket_check=True))
 
 # Create application
 application = tornado.web.Application(
@@ -65,4 +65,4 @@ if __name__ == "__main__":
     import logging
     logging.getLogger().setLevel(logging.DEBUG)
 
-    tornadio2.server.SocketServer(application)
+    tornadio3.server.SocketServer(application)

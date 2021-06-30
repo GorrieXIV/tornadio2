@@ -1,10 +1,10 @@
-``tornadio2.conn``
+``tornadio3.conn``
 ==================
 
 Connection
 ----------
 
-.. automodule:: tornadio2.conn
+.. automodule:: tornadio3.conn
 
 	.. autoclass:: SocketConnection
 
@@ -42,4 +42,4 @@ Connection
 Events
 ------
 
-.. autofunction:: tornadio2.conn.event
+.. autofunction:: tornadio3.conn.event

@@ -1,7 +1,7 @@
-``tornadio2.gen``
+``tornadio3.gen``
 =================
 
-.. automodule:: tornadio2.gen
+.. automodule:: tornadio3.gen
 
 Wrapper
 -------

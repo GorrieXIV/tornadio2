@@ -15,7 +15,7 @@
 # under the License.
 
 """
-    tornadio2.stats
+    tornadio3.stats
     ~~~~~~~~~~~~~~~
 
     Statistics module

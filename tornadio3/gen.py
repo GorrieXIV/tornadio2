@@ -14,7 +14,7 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 """
-    tornadio2.gen
+    tornadio3.gen
     ~~~~~~~~~~~~~
 
     Generator-based interface to make it easier to work in an asynchronous environment.

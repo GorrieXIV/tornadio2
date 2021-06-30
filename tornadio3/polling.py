@@ -15,7 +15,7 @@
 # under the License.
 
 """
-    tornadio2.polling
+    tornadio3.polling
     ~~~~~~~~~~~~~~~~~
 
     This module implements socket.io polling transports.
@@ -26,7 +26,7 @@ import urllib
 
 from tornado.web import HTTPError, asynchronous
 
-from tornadio2 import proto, preflight, stats
+from tornadio3 import proto, preflight, stats
 
 
 class TornadioPollingHandlerBase(preflight.PreflightHandler):

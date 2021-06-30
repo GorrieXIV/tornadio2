@@ -1,14 +1,14 @@
 Migrating from previous TornadIO version
 ========================================
 
-TornadIO2 has some incompatible API changes.
+TornadIO3 has some incompatible API changes.
 
-1. Instead of having one router handler, TornadIO2 exposes transports
+1. Instead of having one router handler, TornadIO3 exposes transports
 as first-class Tornado handlers. This saves some memory per active connection,
 because instead of having two handlers per request (router and transport), you will now have only one.
-This change affects how TornadIO2 is initialized and plugged into your Tornado application::
+This change affects how TornadIO3 is initialized and plugged into your Tornado application::
 
-    ChatServer = tornadio2.router.TornadioRouter(ChatConnection)
+    ChatServer = tornadio3.router.TornadioRouter(ChatConnection)
     # Fill your routes here
     routes = [(r"/", IndexHandler)]
     # Extend list of routes with Tornadio2 URLs
@@ -18,13 +18,13 @@ This change affects how TornadIO2 is initialized and plugged into your Tornado a
 
 or alternative approach::
 
-    ChatServer = tornadio2.router.TornadioRouter(ChatConnection)
+    ChatServer = tornadio3.router.TornadioRouter(ChatConnection)
     application = tornado.web.Application(ChatServer.apply_routes([(r"/", IndexHandler)]))
 
 2. `SocketConnection.on_open` was changed to accept single ``request`` parameter. This parameter
 is instance of the ConnectionInfo class which contains some helper methods like
 get_argument(), get_cookie(), etc. Also, if you return ``False`` from your ``on_open`` handler,
-TornadIO2 will reject connection.
+TornadIO3 will reject connection.
 
 Example::
 

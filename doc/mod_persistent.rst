@@ -1,10 +1,10 @@
-``tornadio2.persistent``
+``tornadio3.persistent``
 ========================
 
 Persistent transports
 ---------------------
 
-.. automodule:: tornadio2.persistent
+.. automodule:: tornadio3.persistent
 
 	.. autoclass:: TornadioWebSocketHandler
 
